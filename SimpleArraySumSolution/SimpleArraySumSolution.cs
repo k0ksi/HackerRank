@@ -12,7 +12,7 @@ class Solution
         {
             sum += item;
         }
-
+         
         return sum;
     }
 
@@ -23,5 +23,6 @@ class Solution
         int[] ar = Array.ConvertAll(ar_temp, Int32.Parse);
         int result = simpleArraySum(n, ar);
         Console.WriteLine(result);
+
     }
 }
