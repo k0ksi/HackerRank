@@ -1,58 +1,95 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-class Solution
+namespace QueenAttackII
 {
-    // TODO Not yet implemented
-    static int queensAttack(int n, int k, int r_q, int c_q, int[][] obstacles)
+    /*
+     * January 30, 2017
+     * problem statement:
+     * https://www.hackerrank.com/contests/world-codesprint-9/challenges/queens-attack-2
+     *            
+     */
+    public class Directions
     {
-        bool[,] matrix = new bool[n, n];
+        // start from left, clockwise, left and up, up, right and up, right, 
+        //            right and down, down, left and down
+        public static int[] directions_row = new int[] { 0, 1, 1, 1, 0, -1, -1, -1 };
+        public static int[] directions_col = new int[] { -1, -1, 0, 1, 1, 1, 0, -1 };
 
-        for (int i = n - 1; i >= 0; i--)
+        public int rows { get; set; }
+
+        public Tuple<int, int> queen { set; get; }
+
+        public Directions(int row, int col, int size)
         {
-            for (int j = 0; j < n; j++)
-            {
-                if(n == r_q - 1)
-                {
-                    matrix[i, j] = true;
-                }
+            queen = new Tuple<int, int>(row, col);
 
-                if(j == c_q - 1)
-                {
-                    matrix[i, j] = true;
-                }
-            }
+            rows = size;
         }
 
-        matrix[r_q - 1, c_q - 1] = true;
-
-        for (int i = 0; i < n; i++)
+        public int CalculateTotal(Tuple<int, int>[] obstacles)
         {
-            for (int j = 0; j < n; j++)
+            // put all obstacles in a hashset
+            var obstacleHashed = new HashSet<Tuple<int, int>>();
+            foreach (Tuple<int, int> obstacle in obstacles)
             {
-                Console.Write(matrix[i, j] + " ");
+                obstacleHashed.Add(obstacle);
             }
 
-            Console.WriteLine();
-        }
+            // go over each direction
+            int count = 0;
 
-        return 0;
+            for (int i = 0; i < 8; i++)
+            {
+                int rowIncrement = directions_row[i];
+                int colIncrement = directions_col[i];
+
+                int runnerRow = queen.Item1 + rowIncrement;
+                int runnerCol = queen.Item2 + colIncrement;
+
+                while (runnerRow >= 0 && runnerRow < rows &&
+                       runnerCol >= 0 && runnerCol < rows &&
+                       !obstacleHashed.Contains(new Tuple<int, int>(runnerRow, runnerCol)))
+                {
+                    runnerRow += rowIncrement;
+                    runnerCol += colIncrement;
+
+                    count++;
+                }
+            }
+
+            return count;
+        }
     }
 
-    static void Main(String[] args)
+    class Program
     {
-        string[] tokens_n = Console.ReadLine().Split(' ');
-        int n = Convert.ToInt32(tokens_n[0]);
-        int k = Convert.ToInt32(tokens_n[1]);
-        string[] tokens_r_q = Console.ReadLine().Split(' ');
-        int r_q = Convert.ToInt32(tokens_r_q[0]);
-        int c_q = Convert.ToInt32(tokens_r_q[1]);
-        int[][] obstacles = new int[k][];
-        for (int obstacles_i = 0; obstacles_i < k; obstacles_i++)
+        static void Main(string[] args)
         {
-            string[] obstacles_temp = Console.ReadLine().Split(' ');
-            obstacles[obstacles_i] = Array.ConvertAll(obstacles_temp, Int32.Parse);
+            ProcessInput();
         }
-        int result = queensAttack(n, k, r_q, c_q, obstacles);
-        Console.WriteLine(result);
+
+        public static void ProcessInput()
+        {
+            var data = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+
+            int rows = data[0];
+            int countObstacles = data[1];
+
+            var queen = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+            var obstacles = new Tuple<int, int>[countObstacles];
+
+            for (int i = 0; i < countObstacles; i++)
+            {
+                var obstacle = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+                obstacles[i] = new Tuple<int, int>(obstacle[0] - 1, obstacle[1] - 1);
+            }
+
+            var directions = new Directions(queen[0] - 1, queen[1] - 1, rows);
+            Console.WriteLine(directions.CalculateTotal(obstacles));
+        }
     }
 }
