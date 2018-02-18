@@ -1,12 +1,29 @@
 ﻿using System;
-
-namespace CamelCaseSolution
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+class Solution
 {
-    class Program
+
+    static int camelcase(string s)
     {
-        static void Main(string[] args)
+        var counter = 1;
+
+        foreach (var ch in s)
         {
-            Console.WriteLine("Hello World!");
+            if (char.IsUpper(ch))
+            {
+                counter++;
+            }
         }
+
+        return counter;
+    }
+
+    static void Main(String[] args)
+    {
+        string s = Console.ReadLine();
+        int result = camelcase(s);
+        Console.WriteLine(result);
     }
 }
