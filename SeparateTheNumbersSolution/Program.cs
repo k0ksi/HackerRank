@@ -1,12 +1,22 @@
 ﻿using System;
-
-namespace SeparateTheNumbersSolution
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+class Solution
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
-    }
+
+	static void separateNumbers(string s)
+	{
+		
+	}
+
+	static void Main(String[] args)
+	{
+		int q = Convert.ToInt32(Console.ReadLine());
+		for (int a0 = 0; a0 < q; a0++)
+		{
+			string s = Console.ReadLine();
+			separateNumbers(s);
+		}
+	}
 }
