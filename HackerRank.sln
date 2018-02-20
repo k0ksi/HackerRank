@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2024
+VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0. WarmUp", "0. WarmUp", "{BE57B8EF-677D-4D09-B076-D7766373A3C4}"
 EndProject
@@ -147,7 +147,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeightedUniformStringsSolut
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SherlockAndTheValidString", "SherlockAndTheValidString", "{4CBBD66B-6BB9-4B43-82F0-3EB6C8291312}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SherlockAndTheValidStringSolution", "SherlockAndTheValidStringSolution\SherlockAndTheValidStringSolution.csproj", "{B97D1B1C-5CA9-4487-8051-F5516E2ECEDA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SherlockAndTheValidStringSolution", "SherlockAndTheValidStringSolution\SherlockAndTheValidStringSolution.csproj", "{B97D1B1C-5CA9-4487-8051-F5516E2ECEDA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03. Sorting", "03. Sorting", "{6F4D953D-750D-49EA-8BA8-1B1B01E18526}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Big Sorting", "Big Sorting", "{6F674A02-F957-4D94-8C79-09C6FED7911D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigSorting", "BigSorting\BigSorting.csproj", "{1EA7BB2A-EC6C-41B3-AAF7-018F315354DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -295,6 +301,10 @@ Global
 		{B97D1B1C-5CA9-4487-8051-F5516E2ECEDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B97D1B1C-5CA9-4487-8051-F5516E2ECEDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B97D1B1C-5CA9-4487-8051-F5516E2ECEDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EA7BB2A-EC6C-41B3-AAF7-018F315354DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EA7BB2A-EC6C-41B3-AAF7-018F315354DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EA7BB2A-EC6C-41B3-AAF7-018F315354DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EA7BB2A-EC6C-41B3-AAF7-018F315354DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -370,6 +380,8 @@ Global
 		{6BEC977E-E436-46A6-9FA2-DE016A531C0E} = {3B04C2FF-43D8-4E9F-A068-9BC1D2737406}
 		{4CBBD66B-6BB9-4B43-82F0-3EB6C8291312} = {A28B9760-B527-4FCE-B594-85D749B7CD44}
 		{B97D1B1C-5CA9-4487-8051-F5516E2ECEDA} = {4CBBD66B-6BB9-4B43-82F0-3EB6C8291312}
+		{6F674A02-F957-4D94-8C79-09C6FED7911D} = {6F4D953D-750D-49EA-8BA8-1B1B01E18526}
+		{1EA7BB2A-EC6C-41B3-AAF7-018F315354DF} = {6F674A02-F957-4D94-8C79-09C6FED7911D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {85DDE337-0119-4C7D-A696-C08B4735282B}
