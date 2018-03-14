@@ -201,7 +201,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FraudulentActivityNotificat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04. Search", "04. Search", "{6BF62DA5-1C61-4AC6-84C3-E05C4839D9BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerlandRadioTransmitters", "HackerlandRadioTransmitters\HackerlandRadioTransmitters.csproj", "{5D400628-C85A-45AE-8FD7-8C3B952A65D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HackerlandRadioTransmitters", "HackerlandRadioTransmitters\HackerlandRadioTransmitters.csproj", "{5D400628-C85A-45AE-8FD7-8C3B952A65D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IceCreamParlor", "IceCreamParlor\IceCreamParlor.csproj", "{69585080-AF31-4646-BD35-398DC1D3CEC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MissingNumbers", "MissingNumbers\MissingNumbers.csproj", "{FA8B2A58-CB3F-4B98-A1C2-BB6A8E303878}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -401,6 +405,14 @@ Global
 		{5D400628-C85A-45AE-8FD7-8C3B952A65D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D400628-C85A-45AE-8FD7-8C3B952A65D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D400628-C85A-45AE-8FD7-8C3B952A65D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69585080-AF31-4646-BD35-398DC1D3CEC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69585080-AF31-4646-BD35-398DC1D3CEC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69585080-AF31-4646-BD35-398DC1D3CEC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69585080-AF31-4646-BD35-398DC1D3CEC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA8B2A58-CB3F-4B98-A1C2-BB6A8E303878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA8B2A58-CB3F-4B98-A1C2-BB6A8E303878}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA8B2A58-CB3F-4B98-A1C2-BB6A8E303878}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA8B2A58-CB3F-4B98-A1C2-BB6A8E303878}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -501,6 +513,8 @@ Global
 		{577D136B-2B48-45B8-9E54-628797C5FCE1} = {6F4D953D-750D-49EA-8BA8-1B1B01E18526}
 		{CD41B4FE-F726-45F3-81DA-9F851EF5599F} = {577D136B-2B48-45B8-9E54-628797C5FCE1}
 		{5D400628-C85A-45AE-8FD7-8C3B952A65D9} = {6BF62DA5-1C61-4AC6-84C3-E05C4839D9BF}
+		{69585080-AF31-4646-BD35-398DC1D3CEC2} = {6BF62DA5-1C61-4AC6-84C3-E05C4839D9BF}
+		{FA8B2A58-CB3F-4B98-A1C2-BB6A8E303878} = {6BF62DA5-1C61-4AC6-84C3-E05C4839D9BF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {85DDE337-0119-4C7D-A696-C08B4735282B}
